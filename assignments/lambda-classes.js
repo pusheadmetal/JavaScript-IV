@@ -80,7 +80,10 @@ class Student extends Person {
         this.myGrade = Attributes.myGrade;
     }
     listsSubjects(){
-        return `${this.favSubjects}`;
+        var subLength = this.favSubjects.length;
+        for (var i=0; i<subLength; i++){
+            console.log(this.favSubjects[i]);
+        }
     }
     PRAssignment(stringSubject){
         return `${this.name} has submitted a PR for ${stringSubject}.`;
@@ -180,7 +183,7 @@ const fred = new Instructor({
   console.log(doug.grade(spongebob,"Flexbox"));
   console.log(doug.standUp("WEB404"));
   console.log(doug.debugsCode(klotz,"AJAX"));
-  console.log(klotz.listsSubjects());
+  klotz.listsSubjects();
   console.log(klotz.PRAssignment("AJAX"));
   console.log(spongebob.sprintChallenge("Flexbox"));
 
